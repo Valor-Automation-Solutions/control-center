@@ -1,22 +1,52 @@
-<!DOCTYPE html>
-<html lang="he" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Valor Automation Control Center · One-Pager</title>
-<meta http-equiv="refresh" content="0; url=brochure/Valor-Control-Center-One-Pager.pdf">
+<!doctype html><html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Valor Automation Control Center</title>
+</head><body><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;900&display=swap">
 <style>
-  body{font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;background:#0f1115;color:#e8eef5;display:flex;min-height:100vh;align-items:center;justify-content:center;margin:0}
-  a{color:#7BA7D0;font-weight:700;font-size:1.1rem}
-  .box{text-align:center;padding:2rem;max-width:28rem}
-  p{color:#9aa7b5;line-height:1.5}
+:root{--ink:#0a1b3d;--ink2:#0f2a5e;--blue:#1e4fa3;--cyan:#2ea8ff;--ice:#dbe8ff;--paper:#f4f7fc;--text:#0b1a33;--mute:#4a5b7a}
+html,body{margin:0;background:var(--ink)}
+body{font-family:"Heebo",Arial,sans-serif;color:#fff;direction:rtl;background:radial-gradient(1200px 600px at 80% -10%,#1e4fa3 0%,var(--ink2) 45%,var(--ink) 100%);min-height:100vh}
+.wrap{max-width:980px;margin:0 auto;padding:36px 20px 60px}
+header{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:28px}
+header img{height:64px}
+.tag{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--ice);border:1px solid rgba(255,255,255,.25);padding:6px 12px;border-radius:999px;direction:ltr}
+h1{font-size:clamp(30px,5vw,48px);line-height:1.15;margin:0 0 10px;font-weight:900;text-wrap:balance}
+h1 span{color:var(--cyan)}
+.lead{font-size:19px;color:var(--ice);max-width:62ch;margin:0 0 26px;line-height:1.6}
+.video{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.12);background:#000}
+video{width:100%;display:block}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:28px 0}
+.p{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:18px}
+.p b{display:block;font-size:17px;margin-bottom:6px}
+.p span{color:var(--ice);font-size:15px;line-height:1.5}
+.cta{background:var(--paper);color:var(--text);border-radius:18px;padding:26px;display:grid;grid-template-columns:1.2fr 1fr;gap:22px;align-items:center}
+.cta h2{margin:0 0 8px;font-size:24px;color:var(--ink2)}
+.cta p{margin:0;color:var(--mute);line-height:1.6}
+.btns{display:flex;flex-direction:column;gap:10px}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;padding:14px 18px;border-radius:12px;text-decoration:none;font-weight:700;font-size:17px}
+.btn.wa{background:#1fbf5a;color:#fff}
+.btn.mail{background:var(--blue);color:#fff}
+.btn.pdf{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.35)}
+.btn.tel{background:#fff;color:var(--ink2);border:2px solid var(--ink2)}
+.who{font-size:14px;color:var(--mute);margin-top:6px}
+footer{margin-top:30px;color:var(--ice);font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+@media(max-width:700px){.pillars{grid-template-columns:1fr}.cta{grid-template-columns:1fr}header img{height:48px}}
 </style>
-</head>
-<body>
-  <div class="box">
-    <h1 style="margin:0 0 .5rem;font-size:1.4rem">Valor Automation Control Center</h1>
-    <p>One-Pager · אם ההורדה לא התחילה אוטומטית:</p>
-    <p><a href="brochure/Valor-Control-Center-One-Pager.pdf">פתחו את ה־PDF</a></p>
-  </div>
-</body>
-</html>
+<div class="wrap">
+<header><img src="assets/valor-logo-white.png" alt="Valor Automation Solutions"><div class="tag">Built for UiPath Orchestrator</div></header>
+<h1>עשרות תהליכי אוטומציה. <span>מסך שליטה אחד.</span></h1>
+<p class="lead">Valor Automation Control Center מרכז את כל מערך האוטומציה בסביבת UiPath שלכם לתצוגה חכמה אחת, בזמן אמת: מה רץ, מה לא, מה מתוכנן, ואיפה יש מקום לעוד. מותקן אצלכם, בלי SaaS חיצוני.</p>
+<div class="video"><video controls playsinline preload="metadata" poster="assets/poster.jpg"><source src="video/Valor-ControlCenter-720p.mp4" type="video/mp4"></video></div>
+<div class="pillars">
+<div class="p"><b>Visibility · נראות</b><span>תמונה אחת ועדכנית של כלל התהליכים, הסטטוסים והחריגות.</span></div>
+<div class="p"><b>Control · שליטה</b><span>התראה על תהליך שהיה אמור לרוץ ולא הופעל, תוך 5 דקות. Smart Scheduling לכל התזמונים.</span></div>
+<div class="p"><b>Optimization · ייעול</b><span>ניצול הרובוטים, עומסים והתנגשויות, ומקום פנוי להרצות נוספות.</span></div>
+</div>
+<div class="cta">
+<div><h2>רוצים לראות את זה על הנתונים שלכם?</h2><p>שיחת הדגמה של 20 דקות על סביבת ה‑Orchestrator שלכם. בלי התקנה מראש, בלי התחייבות.</p><div class="who">עינת שטיינר · Valor Automation Solutions</div></div>
+<div class="btns">
+<a class="btn wa" href="https://wa.me/972549797515?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%AA%D7%90%D7%9D%20%D7%94%D7%93%D7%92%D7%9E%D7%94%20%D7%A9%D7%9C%20Control%20Center">WhatsApp · 054-9797515</a>
+<a class="btn tel" href="tel:+972549797515">התקשרו · 054-9797515</a>
+<a class="btn pdf" href="brochure/Valor-Control-Center-One-Pager.pdf">הורדת העמוד המודפס (PDF)</a>
+<a class="btn mail" href="mailto:info@valorsolution.com?subject=Control%20Center%20-%20%D7%94%D7%93%D7%92%D7%9E%D7%94">info@valorsolution.com</a>
+</div></div>
+<footer><span>Valor Automation Solutions · +972 4 9835712</span><span>See. Control. Optimize.</span></footer>
+</div></body></html>
