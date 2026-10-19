@@ -24,11 +24,25 @@ video{width:100%;display:block}
 .btn{display:flex;align-items:center;justify-content:center;gap:10px;padding:14px 18px;border-radius:12px;text-decoration:none;font-weight:700;font-size:17px}
 .btn.wa{background:#1fbf5a;color:#fff}
 .btn.mail{background:var(--blue);color:#fff}
-.btn.pdf{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.35)}
+.btn.pdf{background:transparent;color:var(--ink2);border:2px solid var(--ink2)}
 .btn.tel{background:#fff;color:var(--ink2);border:2px solid var(--ink2)}
 .who{font-size:14px;color:var(--mute);margin-top:6px}
 footer{margin-top:30px;color:var(--ice);font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 @media(max-width:700px){.pillars{grid-template-columns:1fr}.cta{grid-template-columns:1fr}header img{height:48px}}
+.cta{grid-template-columns:1.4fr 1fr;align-items:start}
+.f{display:flex;flex-direction:column;gap:5px;margin-top:12px}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.f label{font-size:14px;font-weight:700;color:var(--ink2)}
+.f input,.f textarea{font:inherit;font-size:16px;padding:12px 14px;border:1.5px solid #b9c6dd;border-radius:10px;background:#fff;color:var(--text);direction:rtl;width:100%;box-sizing:border-box}
+.f input:focus,.f textarea:focus{outline:3px solid var(--cyan);border-color:var(--blue)}
+.chk{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:var(--mute);line-height:1.5;margin:14px 0 12px}
+.chk input{margin-top:3px;width:20px;height:20px;flex:none}
+button.btn.lead{width:100%;background:var(--blue);color:#fff;border:0;cursor:pointer;font-family:inherit}
+#lf-msg{margin-top:10px;font-weight:700;color:var(--ink2);min-height:1.2em}
+#lf-msg.err{color:#b3261e}
+@media(max-width:700px){.cta{grid-template-columns:1fr}.f2{grid-template-columns:1fr}.btn{min-height:52px}header img{height:48px}.cta{padding:20px}}
+.hp{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden;pointer-events:none}form{position:relative}
+html,body{overflow-x:hidden}
 </style>
 <div class="wrap">
 <header><img src="assets/valor-logo-white.png" alt="Valor Automation Solutions"><div class="tag">Built for UiPath Orchestrator</div></header>
@@ -40,13 +54,37 @@ footer{margin-top:30px;color:var(--ice);font-size:13px;display:flex;justify-cont
 <div class="p"><b>Control · שליטה</b><span>התראה על תהליך שהיה אמור לרוץ ולא הופעל, תוך 5 דקות. Smart Scheduling לכל התזמונים.</span></div>
 <div class="p"><b>Optimization · ייעול</b><span>ניצול הרובוטים, עומסים והתנגשויות, ומקום פנוי להרצות נוספות.</span></div>
 </div>
-<div class="cta">
-<div><h2>רוצים לראות את זה על הנתונים שלכם?</h2><p>שיחת הדגמה של 20 דקות על סביבת ה‑Orchestrator שלכם. בלי התקנה מראש, בלי התחייבות.</p><div class="who">עינת שטיינר · Valor Automation Solutions</div></div>
+<div class="cta" id="lead">
+<div class="leadcol">
+<h2>רוצים לראות את זה על הנתונים שלכם?</h2>
+<p>שיחת הדגמה של 20 דקות על סביבת ה‑Orchestrator שלכם. בלי התקנה מראש, בלי התחייבות. השאירו פרטים ונחזור אליכם.</p>
+<form id="leadform" action="https://formsubmit.co/ajax/guy.cohen@valorsolution.com" method="POST" novalidate>
+<div class="f"><label for="n">שם מלא</label><input id="n" name="name" autocomplete="name" required></div>
+<div class="f"><label for="c">חברה</label><input id="c" name="company" autocomplete="organization"></div>
+<div class="f2"><div class="f"><label for="p">טלפון</label><input id="p" name="phone" type="tel" inputmode="tel" autocomplete="tel" required></div>
+<div class="f"><label for="e">מייל</label><input id="e" name="email" type="email" inputmode="email" autocomplete="email"></div></div>
+<div class="f"><label for="m">במה נוכל לעזור? (לא חובה)</label><textarea id="m" name="message" rows="3"></textarea></div>
+<input type="hidden" name="_subject" value="ליד חדש מדף Control Center"><input type="hidden" name="_template" value="table"><input type="text" name="website" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+<label class="chk"><input type="checkbox" name="consent" required> אני מאשר/ת ליצור איתי קשר בנוגע להדגמה. הפרטים יישמרו אצל ואלור ויועברו אליה דרך ספק טפסים, ולא ישמשו למטרה אחרת.</label>
+<button class="btn lead" type="submit">שליחה</button>
+<div id="lf-msg" role="status" aria-live="polite"></div>
+</form>
+<div class="who">עינת שטיינר · Valor Automation Solutions</div>
+</div>
 <div class="btns">
 <a class="btn wa" href="https://wa.me/972549797515?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%AA%D7%90%D7%9D%20%D7%94%D7%93%D7%92%D7%9E%D7%94%20%D7%A9%D7%9C%20Control%20Center">WhatsApp · 054-9797515</a>
 <a class="btn tel" href="tel:+972549797515">התקשרו · 054-9797515</a>
-<a class="btn pdf" href="brochure/Valor-Control-Center-One-Pager.pdf">הורדת העמוד המודפס (PDF)</a>
 <a class="btn mail" href="mailto:info@valorsolution.com?subject=Control%20Center%20-%20%D7%94%D7%93%D7%92%D7%9E%D7%94">info@valorsolution.com</a>
+<a class="btn pdf" href="brochure/Valor-Control-Center-One-Pager.pdf">הורדת העמוד המודפס (PDF)</a>
 </div></div>
 <footer><span>Valor Automation Solutions · +972 4 9835712</span><span>See. Control. Optimize.</span></footer>
-</div></body></html>
+</div><script>
+document.getElementById('leadform').addEventListener('submit',function(ev){
+ev.preventDefault();var f=ev.target,m=document.getElementById('lf-msg');m.className='';
+if(f.website.value){return}
+if(!f.name.value.trim()||!f.phone.value.trim()||!f.consent.checked){m.className='err';m.textContent='נא למלא שם, טלפון ולאשר את ההסכמה.';return}
+var d=new FormData(f);m.textContent='שולח...';
+fetch(f.action,{method:'POST',body:d,headers:{'Accept':'application/json'}}).then(function(r){if(!r.ok)throw 0;f.reset();m.textContent='תודה, נחזור אליכם בהקדם.'}).catch(function(){m.className='err';m.textContent='לא הצלחנו לשלוח. אפשר ליצור קשר ב-WhatsApp או בטלפון.'})
+});
+</script>
+</body></html>
